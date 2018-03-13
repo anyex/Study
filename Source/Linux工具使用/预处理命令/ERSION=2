@@ -1,0 +1,197 @@
+
+chdir(/usr/share/vim)
+fchdir() to previous dir
+执行 "$VIM/vimrc"
+正在查找 "debian.vim"，在 "/home/jth/.vim,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/jth/.vim/after" 中
+正在查找 "/home/jth/.vim/debian.vim"
+正在查找 "/usr/share/vim/vimfiles/debian.vim"
+正在查找 "/usr/share/vim/vim74/debian.vim"
+chdir(/usr/share/vim/vim74)
+fchdir() to previous dir
+第 10 行: 执行 "/usr/share/vim/vim74/debian.vim"
+结束执行 /usr/share/vim/vim74/debian.vim
+在 /usr/share/vim/vimrc 中继续
+正在查找 "/usr/share/vim/vimfiles/after/debian.vim"
+正在查找 "/home/jth/.vim/after/debian.vim"
+chdir(/usr/share/vim/vim74/syntax)
+fchdir() to previous dir
+第 20 行: 执行 "/usr/share/vim/vim74/syntax/syntax.vim"
+正在查找 "syntax/synload.vim"，在 "/home/jth/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,/home/jth/.vim/after" 中
+正在查找 "/home/jth/.vim/syntax/synload.vim"
+正在查找 "/var/lib/vim/addons/syntax/synload.vim"
+正在查找 "/usr/share/vim/vimfiles/syntax/synload.vim"
+正在查找 "/usr/share/vim/vim74/syntax/synload.vim"
+chdir(/usr/share/vim/vim74/syntax)
+fchdir() to previous dir
+第 19 行: 执行 "/usr/share/vim/vim74/syntax/synload.vim"
+正在查找 "syntax/syncolor.vim"，在 "/home/jth/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,/home/jth/.vim/after" 中
+正在查找 "/home/jth/.vim/syntax/syncolor.vim"
+正在查找 "/var/lib/vim/addons/syntax/syncolor.vim"
+正在查找 "/usr/share/vim/vimfiles/syntax/syncolor.vim"
+正在查找 "/usr/share/vim/vim74/syntax/syncolor.vim"
+chdir(/usr/share/vim/vim74/syntax)
+fchdir() to previous dir
+第 21 行: 执行 "/usr/share/vim/vim74/syntax/syncolor.vim"
+结束执行 /usr/share/vim/vim74/syntax/syncolor.vim
+在 /usr/share/vim/vim74/syntax/synload.vim 中继续
+正在查找 "/usr/share/vim/vimfiles/after/syntax/syncolor.vim"
+正在查找 "/var/lib/vim/addons/after/syntax/syncolor.vim"
+正在查找 "/home/jth/.vim/after/syntax/syncolor.vim"
+结束执行 /usr/share/vim/vim74/syntax/synload.vim
+在 /usr/share/vim/vim74/syntax/syntax.vim 中继续
+正在查找 "filetype.vim"，在 "/home/jth/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,/home/jth/.vim/after" 中
+正在查找 "/home/jth/.vim/filetype.vim"
+正在查找 "/var/lib/vim/addons/filetype.vim"
+正在查找 "/usr/share/vim/vimfiles/filetype.vim"
+正在查找 "/usr/share/vim/vim74/filetype.vim"
+chdir(/usr/share/vim/vim74)
+fchdir() to previous dir
+第 25 行: 执行 "/usr/share/vim/vim74/filetype.vim"
+正在查找 "ftdetect/*.vim"，在 "/home/jth/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,/home/jth/.vim/after" 中
+正在查找 "/home/jth/.vim/ftdetect/*.vim"
+正在查找 "/var/lib/vim/addons/ftdetect/*.vim"
+正在查找 "/usr/share/vim/vimfiles/ftdetect/*.vim"
+正在查找 "/usr/share/vim/vim74/ftdetect/*.vim"
+正在查找 "/usr/share/vim/vimfiles/after/ftdetect/*.vim"
+正在查找 "/var/lib/vim/addons/after/ftdetect/*.vim"
+正在查找 "/home/jth/.vim/after/ftdetect/*.vim"
+not found in 'runtimepath': "ftdetect/*.vim"
+结束执行 /usr/share/vim/vim74/filetype.vim
+在 /usr/share/vim/vim74/syntax/syntax.vim 中继续
+正在查找 "/usr/share/vim/vimfiles/after/filetype.vim"
+正在查找 "/var/lib/vim/addons/after/filetype.vim"
+正在查找 "/home/jth/.vim/after/filetype.vim"
+结束执行 /usr/share/vim/vim74/syntax/syntax.vim
+在 /usr/share/vim/vimrc 中继续
+结束执行 $VIM/vimrc
+chdir(/home/jth)
+fchdir() to previous dir
+不能执行 "$HOME/.vimrc"
+chdir(/home/jth/.vim)
+fchdir() to previous dir
+不能执行 "~/.vim/vimrc"
+chdir(/home/jth)
+fchdir() to previous dir
+不能执行 "$HOME/.exrc"
+正在查找 "plugin/**/*.vim"，在 "/home/jth/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,/home/jth/.vim/after" 中
+正在查找 "/home/jth/.vim/plugin/**/*.vim"
+正在查找 "/var/lib/vim/addons/plugin/**/*.vim"
+正在查找 "/usr/share/vim/vimfiles/plugin/**/*.vim"
+正在查找 "/usr/share/vim/vim74/plugin/**/*.vim"
+chdir(/usr/share/vim/vim74/plugin)
+fchdir() to previous dir
+执行 "/usr/share/vim/vim74/plugin/getscriptPlugin.vim"
+结束执行 /usr/share/vim/vim74/plugin/getscriptPlugin.vim
+chdir(/usr/share/vim/vim74/plugin)
+fchdir() to previous dir
+执行 "/usr/share/vim/vim74/plugin/gzip.vim"
+结束执行 /usr/share/vim/vim74/plugin/gzip.vim
+chdir(/usr/share/vim/vim74/plugin)
+fchdir() to previous dir
+执行 "/usr/share/vim/vim74/plugin/logiPat.vim"
+结束执行 /usr/share/vim/vim74/plugin/logiPat.vim
+chdir(/usr/share/vim/vim74/plugin)
+fchdir() to previous dir
+执行 "/usr/share/vim/vim74/plugin/matchparen.vim"
+结束执行 /usr/share/vim/vim74/plugin/matchparen.vim
+chdir(/usr/share/vim/vim74/plugin)
+fchdir() to previous dir
+执行 "/usr/share/vim/vim74/plugin/netrwPlugin.vim"
+结束执行 /usr/share/vim/vim74/plugin/netrwPlugin.vim
+chdir(/usr/share/vim/vim74/plugin)
+fchdir() to previous dir
+执行 "/usr/share/vim/vim74/plugin/rrhelper.vim"
+结束执行 /usr/share/vim/vim74/plugin/rrhelper.vim
+chdir(/usr/share/vim/vim74/plugin)
+fchdir() to previous dir
+执行 "/usr/share/vim/vim74/plugin/spellfile.vim"
+结束执行 /usr/share/vim/vim74/plugin/spellfile.vim
+chdir(/usr/share/vim/vim74/plugin)
+fchdir() to previous dir
+执行 "/usr/share/vim/vim74/plugin/tarPlugin.vim"
+结束执行 /usr/share/vim/vim74/plugin/tarPlugin.vim
+chdir(/usr/share/vim/vim74/plugin)
+fchdir() to previous dir
+执行 "/usr/share/vim/vim74/plugin/tohtml.vim"
+结束执行 /usr/share/vim/vim74/plugin/tohtml.vim
+chdir(/usr/share/vim/vim74/plugin)
+fchdir() to previous dir
+执行 "/usr/share/vim/vim74/plugin/vimballPlugin.vim"
+结束执行 /usr/share/vim/vim74/plugin/vimballPlugin.vim
+chdir(/usr/share/vim/vim74/plugin)
+fchdir() to previous dir
+执行 "/usr/share/vim/vim74/plugin/zipPlugin.vim"
+结束执行 /usr/share/vim/vim74/plugin/zipPlugin.vim
+正在查找 "/usr/share/vim/vimfiles/after/plugin/**/*.vim"
+正在查找 "/var/lib/vim/addons/after/plugin/**/*.vim"
+正在查找 "/home/jth/.vim/after/plugin/**/*.vim"
+正在查找 "pack/*/start/*"，在 "/home/jth/.vim,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/home/jth/.vim/after" 中
+正在查找 "/home/jth/.vim/pack/*/start/*"
+正在查找 "/usr/share/vim/vimfiles/pack/*/start/*"
+正在查找 "/usr/share/vim/vim74/pack/*/start/*"
+正在查找 "/usr/share/vim/vimfiles/after/pack/*/start/*"
+正在查找 "/home/jth/.vim/after/pack/*/start/*"
+not found in 'packpath': "pack/*/start/*"
+读取 viminfo 文件 "/home/jth/.viminfo" 信息 旧文件
+"warning_error.c" 
+"warning_error.c" 24L, 324C
+读取 viminfo 文件 "/home/jth/.viminfo" 标记
+执行 BufRead 自动命令 "*.c"
+自动命令 call s:FTlpc()
+
+执行 FileType 自动命令 "*"
+自动命令 exe "set syntax=" . expand("<amatch>")
+
+执行 Syntax 自动命令 "*"
+自动命令 call s:SynSet()
+
+正在查找 "syntax/c.vim syntax/c/*.vim"，在 "/home/jth/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,/home/jth/.vim/after" 中
+正在查找 "/home/jth/.vim/syntax/c.vim"
+正在查找 "/home/jth/.vim/syntax/c/*.vim"
+正在查找 "/var/lib/vim/addons/syntax/c.vim"
+正在查找 "/var/lib/vim/addons/syntax/c/*.vim"
+正在查找 "/usr/share/vim/vimfiles/syntax/c.vim"
+正在查找 "/usr/share/vim/vimfiles/syntax/c/*.vim"
+正在查找 "/usr/share/vim/vim74/syntax/c.vim"
+chdir(/usr/share/vim/vim74/syntax)
+fchdir() to previous dir
+第 24 行: 执行 "/usr/share/vim/vim74/syntax/c.vim"
+结束执行 /usr/share/vim/vim74/syntax/c.vim
+在 function <SNR>4_SynSet 中继续
+正在查找 "/usr/share/vim/vim74/syntax/c/*.vim"
+正在查找 "/usr/share/vim/vimfiles/after/syntax/c.vim"
+正在查找 "/usr/share/vim/vimfiles/after/syntax/c/*.vim"
+正在查找 "/var/lib/vim/addons/after/syntax/c.vim"
+正在查找 "/var/lib/vim/addons/after/syntax/c/*.vim"
+正在查找 "/home/jth/.vim/after/syntax/c.vim"
+正在查找 "/home/jth/.vim/after/syntax/c/*.vim"
+执行 Syntax 自动命令 "c"
+自动命令 if (exists('b:load_doxygen_syntax') && b:load_doxygen_syntax)^I|| (exists('g:load_doxygen_syntax') && g:load_doxygen_syntax)   | runtime! syntax/doxygen.vim | endif
+
+执行 BufRead 自动命令 "*"
+自动命令 if !did_filetype() && expand("<amatch>") !~ g:ft_ignore_pat | runtime! scripts.vim | endif
+
+执行 BufRead 自动命令 "*"
+自动命令 if !did_filetype() && expand("<amatch>") !~ g:ft_ignore_pat    && (getline(1) =~ '^#' || getline(2) =~ '^#' || getline(3) =~ '^#'^I|| getline(4) =~ '^#' || getline(5) =~ '^#') |   setf conf | endif
+
+执行 BufEnter 自动命令 "*"
+自动命令 sil call s:LocalBrowse(expand("<amatch>"))
+
+执行 VimEnter 自动命令 "*"
+自动命令 sil call s:VimEnter(expand("<amatch>"))
+
+执行 CursorMoved 自动命令 "*"
+自动命令 call s:Highlight_Matching_Pair()
+
+正在查找 "syntax/syncolor.vim"，在 "/home/jth/.vim,/var/lib/vim/addons,/usr/share/vim/vimfiles,/usr/share/vim/vim74,/usr/share/vim/vimfiles/after,/var/lib/vim/addons/after,/home/jth/.vim/after" 中
+正在查找 "/home/jth/.vim/syntax/syncolor.vim"
+正在查找 "/var/lib/vim/addons/syntax/syncolor.vim"
+正在查找 "/usr/share/vim/vimfiles/syntax/syncolor.vim"
+正在查找 "/usr/share/vim/vim74/syntax/syncolor.vim"
+chdir(/usr/share/vim/vim74/syntax)
+fchdir() to previous dir
+执行 "/usr/share/vim/vim74/syntax/syncolor.vim"
+结束执行 /usr/share/vim/vim74/syntax/syncolor.vim
+正在查找 "/usr/share/vim/vimfiles/after/syntax/syncolor.vim"
+正在查找 "/var/lib/vim/addons/after/syntax/syncolor.vim"
+正在查找 "/home/jth/.vim/after/syntax/syncolor.vim"
