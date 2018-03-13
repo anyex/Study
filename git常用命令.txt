@@ -1,0 +1,23 @@
+git remote 查看远程库
+git remote -v 显示远程库的克隆地址
+git remote add [名字]  [地址]   添加远程库
+git fetch [远程库名字]	从远程库抓取数据到本地
+git push[远程库] [本地分支]  推送数据到远程仓库
+git remote show [远程库名字]  查看远程库的详细信息
+git branch -a 查看远程分支
+git branch    查看本地分支
+
+git init 创建本地仓库
+git add [文件名] 向本地仓库添加文件
+git status 查看文件
+
+
+//提示无法提交的时候
+git add. 监控工作区的状态树，使用时会把工作时的所有变化提交到暂存区
+git add -u ：他仅监控已经被add的文件（即tracked file），他会将被修改的文件提交到暂存区。add -u 不会提交新文件（untracked file）。（git add --update的缩写）
+
+git add -A 上面功能合集
+
+
+注：git不能识别中文路径
+
