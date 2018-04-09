@@ -1,0 +1,762 @@
+一.命名空间
+      命名空间将全局作用域分成不同的部分
+		不同命名空间中的标识符可以同名而不会发生冲突
+		命名空间也可以嵌套
+		全局作用域也叫默认命名空间
+   定义：
+   1.  			namespace name{……}
+   2.引用
+		 使用整个命名空间：using namespace name;
+		 使用命名空间中的变量：using namespace::variable;
+		 使用默认命名空间中的变量：  ：：variable
+   默认情况下可以直接使用默认命名空间中的所有标示符
+   
+ 
+二.C++对C的增强
+
+    1.实用性增强，对于变量的定义位置，可以随意，没有要求	
+          
+		  int test1(void)
+		  {
+	            int  i = 0;
+                    
+               for(i = 0; i < 10; i++)
+               {    
+                    
+               }    
+                    
+               for(int i = 0; i < 10; i++) {
+               }    
+                    
+               return 0;
+         }
+    2.全局变量的检测能力增强，一个变量不论声明，定义，只能出现一次
+	     int g_val;
+		 int g_val = 10;
+		 在C语言中会把同名变量归并到同一地址，能够通过编译，C++中不能
+	
+	3.C语言的struct定义了一组变量的集合，C编译器不认为这是一种新类型
+	  C++中的struct是一个新类型的定义声明
+	  如 struct teacher{int id;char name[20]};
+	     调用teacher，不需要再写struct teacher
+		 可以直接使用 teacher a ;声明
+		 
+	
+	4.C++增加了bool类型
+		bool只有两个值 false ,true;
+		编译器会把非0值转换为true，0值转换为false
+		
+	5. ?:运算符的加强
+		
+	     void test()
+		 {
+		    int a = 10;
+			int b = 20;
+			(a < b ? a : b) = 30; //返回是a变量的别名 
+	
+	        cout << "a = " << a << endl;//输出30
+			
+			(a < b ? 10 : b); //返回中有常量，返回的是值，不能作为右值使用
+		 }
+	
+
+	6. const 的加强
+	       
+		  void test6()
+		  {
+		     const int a = 10;
+			 int *p = (int*)&a;//为a临时分配一个地址空间
+			 
+			 *p = 20;//改变的临时空间里的值，对a无影响
+			 
+			 printf("a = %d\n",a);
+		  
+		  }
+		C语言中，能够通过指针的间接赋值改变a的值，C++中不能
+		
+		C++编译器对const常量的处理：
+			当碰见常量声明时在符号表中放入常量
+			编译过程中若发现使用常量则直接以符号表中的值替换
+			编译过程中若发现对const使用了extern或&操作符，则给对应的常量分配存储空间
+			
+			C++编译器虽然为const常量分配空间，但不会使用其存储空间中的值
+			
+			    C++只是对于内置数据类型做常数替换，而对于像结构体这样的非内置数据类型则不会，
+		    因为结构体类型不是内置的数据类型，编译器不知道如何直接替换，因此必须要访问内存
+			获取数据，而访问内存必然可以被修改
+			
+			
+			
+			
+			
+			
+    7.const 与 define的区别
+			const在 编译的时候实现，define在预编译的时候实现
+			define没有作用域的限制
+	8. 枚举
+			enum season{
+			   SPR,
+			   SUM,
+			   AUT,
+			   WIN
+			};
+			C： enum season s = SPR;
+				s=0;
+				s=1;
+				s=2;
+			C++中只能用enum中的元素直接赋值，不能用int类型数据，不用再int类型和枚举类型值中转换
+			
+	 
+	 
+	9. 引用
+	      
+		   1 引用没有定义，是一种关系型声明，声明它和原有某一变量(实体)的关系
+				故其类型和原类型保持一致，且不分配内存，与被引用的变量有相同的地址
+				
+		   2 声明的时候必须初始化，一经声明，不可变更
+		   
+		   3 可对引用，再次引用，多次引用的结果，是某一变量具有多个别名
+		   
+		   4 &符号前有数据类型时，是引用，其它均为取地址
+		   
+		   5 引用作为其他变量的别名，因此可以在一些场合可以代替指针
+		   
+		       void swap(int& a,int &b)      void swap(int *pa,int* pb)
+			   {							 {
+					int t = a;					 int t = *pa;
+				    a = b;						 *pa = *pb;
+					b = t;						 *pb = t;
+			   }							  }
+			   
+			   引用作为函数参数声明时，不进行初始化
+			   
+		   6 const 引用
+				
+				
+				#include "stdio.h"
+				
+				int main()
+				{
+					const int& b = 1;
+					
+					int *p = (int*)&b;
+					
+					*p = 5;
+					
+					printf("a = %d\n",b);
+					printf("b = %p\n",&b);
+					
+					return 0;
+				}
+				
+				const& int e 相当于const int* const e
+				普通引用相当于int* const e1
+			    当使用常量对const引用进行初始化时，C++编译器会为常量分配空间，并用
+				引用名作为空间的别名
+				使用字面量对const引用初始化后，将生成一个只读变量
+				
+				
+				
+			7.函数返回值作为引用
+				
+					若返回栈变量(局部变量)：
+						不能成为其他引用的初始值，不能作为左值使用
+					
+					若返回静态变量或全局变量
+					
+						可以成为其他引用的初始值（即可以做左值，也可以做右值）
+						
+	 
+	              #include "stdio.h"
+				  
+				  int& f()
+				  {
+				    static int a = 0;
+					return a;
+				  }
+				  
+				  int& g()
+				  {
+				    int a = 0;
+					return a;
+				  }
+						
+	              int main()
+				  {
+				     int a = 0;
+					 int& b = g();
+					 f() = 10;
+					 printf("a = %d\n",a);
+					 printf("b = %d\n",b);
+					 printf("f() = %d\n",f());
+					 
+					 return 0;
+				  
+				  }
+				  
+				
+	10.内联函数
+			 1  C++中可以使用内联函数替代宏代码片段，内联函数用inline关键字进行声明
+			 
+			 2  内联函数声明时inline关键字必须和函数定义结合在一起，否则编译器会直接忽略内联请求
+			 
+			 3  如果函数声明写了 inline 关键字  但是 函数定义没有写inline 编译器依然不会当inline函数处理
+			
+	         4  C++编译器可以将一个函数进行内联编译，被C++编译器内联编译的函数叫内联函数
+			 
+			 5  内联函数在最终生成的代码中没有定义，C++编译器直接将函数体插入在函数调用的地方，内联函数没有普通函数调用时的额外开销(压栈，跳转，返回)
+			 
+			 6  内联函数由编译器处理，直接将编译后的函数体插入调用的地方
+			    宏代码片段由预处理器处理，进行简单的文本替换，没有任何编译过程
+				
+			 7  内联编译的限制：
+								不要存在任何形式的循环语句
+								不要存在过多的条件判断语句
+								函数体不能过大
+								不能堆函数进行取地址操作
+								函数内联声明必须在调用语句之前
+								
+								内联函数相对于普通函数的优势只是省去了函数调用时压栈，跳转和返回的开销
+								因此当函数体的执行远大于压栈，跳转和返回所用的开销时，内联没有意义
+								
+			                #define _CRT_SECURE_NO_WARNINGS
+
+                            #include <iostream>
+                            
+                            using namespace std;
+                            
+                            #define MY_MAX(a, b) ((a) < (b)? (a):(b))
+                            
+                            inline int my_func(int a, int b)
+                            {
+                            	return (a < b ? a : b);
+                            }
+                            
+                            inline void printAB(int a, int b);
+                            
+                            
+                            int main()
+                            {
+                            	int a = 1;
+                            	int b = 3;
+                            
+                            	int c = my_func(++a, b);//在编译时会将my_func(++a,b)展开为(a<b?a:b),从而消除了写成函数的开销
+                            							//内联函数在调试模式中，不会被内联，会像普通函数一样生成含有调试信息的可执行代码
+                            	                        
+                            	printAB(++a, b);
+                            
+                            	printf("a = %d\n", a);
+                            	printf("b = %d\n", b);
+                            	printf("c = %d\n", c);
+                            
+                            	system("pause");
+                            
+                            	return 0;
+                            	
+                            }
+                            
+                            //printAB不能被内联
+                            void printAB(int a, int b)
+                            {
+                            	cout << "a = " << a << ", b = " << b << endl;
+                            }				
+                         
+	11.	默认参数
+			
+			1.C++在函数声明时会为参数提供一个默认值
+			  当函数调用时没有指定这个参数的值，编译器会自动用默认值代替
+			
+			2.函数参数默认规则
+				1 只有参数列表后面部分的参数才可以提供默认参数值
+				2 一旦在一个函数调用中开始使用默认参数值，那么这个参数后的所有参数都必须使用默认参数值
+				
+				#include <iostream>
+                  using namespace std;
+                  void func(int a = 666)//如果不传递参数a就是666
+                  {
+                  	cout << "a = " << a << endl;
+                  }
+                  int main()
+                  {
+                  	func();
+                  	func(10);
+                  	return 0;
+                  }
+				  如上面的输出为 a=666
+								 a=10;
+			3 如果默认参数出现，那么右边的都必须有默认参数
+					
+					void printABC(int a,int b,int x=5,int y=4);
+	
+    12 占位参数
+			
+			1.占位参数只有参数类型声明，而没有参数名声明
+			
+			2.一般情况下，在函数体内部无法使用占位参数
+			
+			  如 int func(int a,int b,int);
+			    调用函数时，必须调用func(1,2,3)写满三个参数
+				
+			3 可以将占位参数和默认参数结合起来
+				
+				 int func(int a,int b,int=0)
+				 
+				 占位参数主要是为了兼容C语言中不规范的写法和为了以后扩展程序
+				 
+	
+	
+	
+	13 函数重载
+	
+	     1.函数：一个函数主要由函数返回值和函数参数列表（个数，类型，顺序）组成
+		 
+		   函数重载：即函数名相同，返回类型相同，参数列表不同
+		   
+		             函数返回值并不是构成函数重载的条件
+					 
+					 函数重载，最后不要写默认参数，避免调用出现函数冲突
+					 
+		     函数调用规则
+					1.如果能够严格匹配调用完全匹配的
+					2.如果没有完全匹配，调用隐式转换
+					3.如果匹配不到，直接报错
+					
+		 		
+		 2.重载底层实现
+				
+				C++利用name mangling技术来改名函数名，区分参数不同的函数名
+				如 void func(char a)    //改名为func_c(char a)
+				   void func(char a,int b,double c)//改名为func_cid(char a,int b,double c)
+		
+         3.函数重载和函数指针
+
+				1.定义函数类型
+					typedef int(MY_FUNC)(int ,int )
+				2.定义一个函数类型的指针类型
+				   
+				    typedef int(*MY_FUNC_P)(int ,int )
+					  //typedef是要声明的类型换个名字不是替换
+				   
+		   
+		             #include <iostream>
+
+                      using namespace std;
+                      
+                      typedef int(MY_FUNC)(int, int);
+                      typedef int(*MY_FUNC_P)(int, int);
+                      
+                      
+                      
+                      
+                      void func(int a)
+                      {
+                      	cout << "fun" << endl;
+                      }
+                      
+                      int  func(int a, int b)
+                      {
+                      	cout << "a,b" << endl;
+                      	return 0;
+                      }
+                      
+                      int func(int a, int b, int v)
+                      {
+                      	cout << "a,b,v"<<endl;
+                      	return 0;
+                      }
+                      int main(void)
+                      {
+                      	MY_FUNC *fp = NULL;
+                      	fp = func;
+                      	MY_FUNC_P fp1 = func;
+                      	fp(20, 10);
+                      	fp1(20, 40);
+                      
+                      	int(*fp3)(int, int,int);
+                      
+                      	fp3 = func;
+                      	fp3(2, 3, 5);
+                      	return 0;
+                      }
+                      			      
+			           输出   a,b
+                              a,b
+                              a,b,v
+							 
+				在给函数指针赋值的时候就会发生函数重载匹配，在
+				调用函数指针的时候，所调用的函数就已经固定
+				
+	14类的封装
+		面向对象有三大特点：封装，继承，多态
+		
+			1 c++中将struct做了功能的增强，struct实际上就是一个class
+			  只是struct内部，默认的访问控制权限是public
+			
+			2 class的类的内部，默认的访问控制权限是private
+			
+			3 访问控制权限
+				public    用public标示的成员变量和函数，在类的外部和类的内部都可以访问
+				
+				protected 如果是单个类，跟private是一样的，在类的内部能够访问，在类的外部不能访问
+				
+				private   只能在类的内部访问
+				
+			4 C++是面向对象的语言，所有方法都封装在类中，通过一个个的对象进行编程
+			     
+				 实例化的类就是对象
+				 
+				 
+			              #include "iostream"
+                          using namespace std;
+                          class MyDate {
+                          public:
+                          	void init_date()
+                          	{
+                          		cout << "年，月，日" << endl;
+                          		cin >> year;
+                          		cin >> month;
+                          		cin >> day;
+                          	};
+                          
+                          	void print_date()
+                          	{
+                          		cout << year << "年" << month << "月" << day << "日" << endl;
+                          	}
+                          
+                          	bool is_leap_year()
+                          	{
+                          		if ((year % 4 == 0) && (year % 100 != 0) || (year % 400 == 0))
+                          		{
+                          			return true;
+                          		}
+                          
+                          		return false;
+                          	}
+							
+							//修改私有变量
+							int getYear()
+	                        {
+	                        	return year;
+	                        }
+                            
+	                        void setYear(int set_year)
+	                        {
+	                        	year = set_year;
+	                        }
+                          
+                          protected://保护控制权限，在类的继承中与private有区别，在单个类中，跟private一样
+                          private:
+                          	int year;
+                          	int month;
+                          	int day;
+                          };
+                          
+                          int main()
+                          {
+                          		MyDate mydate;
+	                            mydate.init_date();
+	                            mydate.print_date();
+                                
+	                            
+	                            if (mydate.is_leap_year())
+	                            {
+	                            	cout << "是闰年" << endl;
+	                            }
+	                            else
+	                            	cout << "不是闰年" << endl;
+                                
+								//通过内部方法修改和获取类的私有变量
+	                            cout << "修改前：year = " << mydate.getYear() << endl;
+	                            mydate.setYear(2018);
+	                            cout << "修改后：year = " << mydate.getYear() << endl;
+                           }
+                                            			
+			   
+			            年，月，日
+                        2015
+                        2
+                        4
+                        2015年2月4日
+                        不是闰年
+                        修改前：year = 2015
+                        修改后：year = 2018
+                        			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+	15 构造与析构函数
+			
+		    1 构造函数
+				
+				1) 与类名相同的函数即构造函数，构造函数可以有参数，但不能有任何返回类型
+				   构造函数在创建对象的时候就会自动调用
+			
+			2 析构函数
+			
+					当类的实例对象被销毁的时候会自动调用析构函数
+				   
+				        #include "iostream"
+                        #include "string.h"
+                        using namespace std;
+                        
+                        class test
+                        {
+                        public:
+                        	//无参构造函数
+                        	test()
+                        	{
+                        		m_x = 0;
+                        		m_y = 0;
+                        		name = (char*)malloc(100);
+                        		
+                        		cout << "m_x = " << m_x << "\t" << "m_y = " << m_y << endl;
+                        	}
+                        	test(int x)
+                        	{
+                        		m_x = x;
+                        		m_y = 0;
+                        		cout << "m_x = " << m_x << "\t" << "m_y = " << m_y << endl;
+                        	}
+                        	test(int x, int y)
+                        	{
+                        		m_x = x;
+                        		m_y = y;
+                        		cout << "m_x = " << m_x << "\t" << "m_y = " << m_y << endl;
+                        	}
+                        	~test() {
+                        		if (name != NULL)
+                        			free(name);
+                        		cout << "析构函数被运行" << endl;
+                        	};
+                        private:
+                        	int m_x;
+                        	int m_y;
+                        	char* name;
+                        };
+                        
+                        
+                        void tes()
+                        {
+                        	test s;
+                        
+                        }
+                        int main()
+                        {
+                        	test test1(5);//调用一个参数的构造函数
+                        	test test2;//调用无参构造函数
+                        	test test3(5, 10);//调用两个参数的构造函数
+                        	tes();
+                        	return 0;
+                        
+                        }
+                        输出：
+						        m_x = 5 m_y = 0
+                                m_x = 0 m_y = 0
+                                m_x = 5 m_y = 10
+                                m_x = 0 m_y = 0
+                                析构函数被运行
+								
+				
+		    3 拷贝构造函数
+				 调用拷贝构造函数的时机
+					1.一个对象以值传递的方式传入函数体
+					2.一个对象以值传递的方式从函数返回
+					3.一个对象需要通过另外一个对象进行初始化
+				
+				 生成默认的拷贝构造函数
+					
+					1.如果用户没有自定义拷贝构造函数，并在代码中使用到了拷贝构造函数，编译器
+					  就会生成默认的拷贝构造函数
+					  
+					2.如果用户定义了一个构造函数，但不是拷贝构造函数，而此时代码中又用到了拷贝构造函数
+					  编译器也会生成默认的构造函数
+					  
+					        #include "iostream"
+                            using namespace std;
+                            
+                            class Test
+                            {
+                            public:
+                            	//Test(){};默认的构造函数，当手动提供一个构造函数，默认的构造函数就被隐藏
+                            
+                            	Test(int x, int y)//当提供这个构造函数，默认的构造函数就不复存在
+                            	{
+                            		m_x = x;
+                            		m_y = y;
+                            	}
+                            
+                            	//无参数的构造函数
+                            	Test() {
+                            		m_x = 0;
+                            		m_y = 0;
+                            		cout << "调用了无参数的构造函数" << endl;
+                            	}
+                            
+                            	//拷贝构造函数，通过另外一个Test对象another来初始化自己
+                            	Test(const Test& another)
+                            	{
+                            		cout << "调用了拷贝操作符号" << endl;
+                            		m_x = another.m_x;
+                            		m_y = another.m_y;
+                            	}
+                            
+                            	//等号操作符
+                            	void operator = (const Test &t)
+                            	{
+                            		cout << "调用了=号操作符" << endl;
+                            		m_x = t.m_x;
+                            		m_y = t.m_y;
+                            	}
+                            
+                            	void printT()
+                            	{
+                            		cout << "x: " << m_x << " y: " << m_y << endl;
+                            	}
+                            
+                            	//提供一个析构函数
+                            	~Test()
+                            	{
+                            		cout << " ~Test() 析构函数被执行了" << endl;
+                            		cout << "(" << m_x << "," << m_y << ")" << "被析构了" << endl;
+                            	}
+                            
+                            
+                            
+                            
+                            private:
+                            	int m_x;
+                            	int m_y;
+                            };
+                            
+                            //拷贝构造函数1
+                            void test1()
+                            {
+                            	Test t1(1, 2);
+                            	Test t2(t1);
+                            
+                            	//通过t1给t2进行赋值
+                            	t2.printT();
+                            }
+                            //拷贝构造函数2
+                            
+                            void test2()
+                            {
+                            	Test t1(1, 2);
+                            	Test t2;
+                            	t2 = t1;//调用的不是拷贝构造函数，调用的是"="号操作符，也能够完成将
+                            			//t1的值给t2但不是调用t2的拷贝构造函数
+                            
+                            }
+                            
+                            void func(Test t)
+                            {
+                            	cout << "func begin..." << endl;
+                            	t.printT();
+                            	cout << "func end..." << endl;
+                            }
+                            
+                            //拷贝构造函数3
+                            void test3()
+                            {
+                            	cout << "test3 begin..." << endl;
+                            	Test t1(10, 20);//创建了一个t1的对象，通过t1的有参数的构造函数初始化
+                            	func(t1);//一个对象以值的方式传入函数会调用拷贝构造函数
+                            
+                            	cout << "test3 end..." << endl;
+                            }
+                            
+                            int func(void)
+                            {
+                            	int a = 10;
+                            	return a;
+                            }
+                            
+                            //拷贝构造函数4
+                            Test func2()
+                            {
+                            	cout << "func2 begin..." << endl;
+                            	Test temp(10, 20);
+                            	cout << "func2 end..." << endl;
+                            	return temp;//有一个临时的匿名对象temp，把temp的数据给到临时的匿名对象
+                            				//返回一个对象也会调用拷贝构造函数
+                            }
+                            
+                            void test4()
+                            {
+                            	cout << "test4 begin...." << endl;
+                            	func2();
+                            
+                            	cout << "test4 end" << endl;
+                            }
+                            
+                            void test5()
+                            {
+                            	cout << "test5 begin...";
+                            	Test t1 = func2();
+                            	cout << "test5 end...";
+                            
+                            }
+                            
+                            void test6()
+                            {
+                            	cout << "test6 begin..." << endl;
+                            	Test t1;
+                            	t1 = func2();
+                            
+                            	cout << "test6 end..." << endl;
+                            }
+                            
+                            int main()
+                            {
+                            	test3();
+                            	return 0;
+                            }
+                                                            
+                            				
+                
+						
+			 
+			    4.深拷贝，浅拷贝
+				
+				    浅拷贝：如果复制的对象引用了一个外部内容(如分配在堆上的数据)，那么复制这个对象的时候，
+							让新旧对象指向同一个外部内容（指针虽然复制，但指向的空间内容没有复制，而是两个对象共用）
+				            
+					深拷贝：如果复制这个对象的时候为新对象制作了外部对象的独立复制，就是深拷贝
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					

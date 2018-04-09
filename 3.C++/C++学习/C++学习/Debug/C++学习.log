@@ -1,0 +1,5 @@
+﻿  namespace.cpp
+f:\studysummer\3.c++\c++学习\c++学习\namespace.cpp(47): error C2374: “namespaceA::a”: 重定义；多次初始化
+  f:\studysummer\3.c++\c++学习\c++学习\namespace.cpp(14): note: 参见“namespaceA::a”的声明
+f:\studysummer\3.c++\c++学习\c++学习\namespace.cpp(48): error C2088: “<<”: 对于 class 非法
+f:\studysummer\3.c++\c++学习\c++学习\namespace.cpp(50): error C2088: “<<”: 对于 class 非法

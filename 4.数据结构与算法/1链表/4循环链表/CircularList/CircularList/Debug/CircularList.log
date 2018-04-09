@@ -1,0 +1,14 @@
+﻿  CircularList.cpp
+f:\studysummer\4.数据结构与算法\链表\4循环链表\circularlist\circularlist\circularlist.cpp(66): error C2143: 语法错误: 缺少“)”(在“;”的前面)
+f:\studysummer\4.数据结构与算法\链表\4循环链表\circularlist\circularlist\circularlist.cpp(66): error C2065: “i”: 未声明的标识符
+f:\studysummer\4.数据结构与算法\链表\4循环链表\circularlist\circularlist\circularlist.cpp(66): error C2059: 语法错误:“)”
+f:\studysummer\4.数据结构与算法\链表\4循环链表\circularlist\circularlist\circularlist.cpp(68): error C2059: 语法错误:“;”
+f:\studysummer\4.数据结构与算法\链表\4循环链表\circularlist\circularlist\circularlist.cpp(71): error C2065: “current”: 未声明的标识符
+f:\studysummer\4.数据结构与算法\链表\4循环链表\circularlist\circularlist\circularlist.cpp(71): error C2227: “->next”的左边必须指向类/结构/联合/泛型类型
+  f:\studysummer\4.数据结构与算法\链表\4循环链表\circularlist\circularlist\circularlist.cpp(71): note: 类型是“unknown-type”
+f:\studysummer\4.数据结构与算法\链表\4循环链表\circularlist\circularlist\circularlist.cpp(72): error C2065: “current”: 未声明的标识符
+f:\studysummer\4.数据结构与算法\链表\4循环链表\circularlist\circularlist\circularlist.cpp(72): error C2227: “->next”的左边必须指向类/结构/联合/泛型类型
+  f:\studysummer\4.数据结构与算法\链表\4循环链表\circularlist\circularlist\circularlist.cpp(72): note: 类型是“unknown-type”
+f:\studysummer\4.数据结构与算法\链表\4循环链表\circularlist\circularlist\circularlist.cpp(66): warning C4390: “;”: 找到空的受控语句；这是否是有意的?
+f:\studysummer\4.数据结构与算法\链表\4循环链表\circularlist\circularlist\circularlist.cpp(81): error C2059: 语法错误:“}”
+f:\studysummer\4.数据结构与算法\链表\4循环链表\circularlist\circularlist\circularlist.cpp(81): error C2143: 语法错误: 缺少“;”(在“}”的前面)

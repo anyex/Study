@@ -1,0 +1,8 @@
+﻿  main.cpp
+f:\studysummer\4.数据结构与算法\2.堆栈\1.顺序栈\seqstack\中缀转后缀\main.cpp(63): warning C4302: “类型转换”: 从“void *”到“char”截断
+f:\studysummer\4.数据结构与算法\2.堆栈\1.顺序栈\seqstack\中缀转后缀\main.cpp(64): warning C4302: “类型转换”: 从“void *”到“char”截断
+f:\studysummer\4.数据结构与算法\2.堆栈\1.顺序栈\seqstack\中缀转后缀\main.cpp(75): warning C4302: “类型转换”: 从“void *”到“char”截断
+f:\studysummer\4.数据结构与算法\2.堆栈\1.顺序栈\seqstack\中缀转后缀\main.cpp(77): warning C4302: “类型转换”: 从“void *”到“char”截断
+f:\studysummer\4.数据结构与算法\2.堆栈\1.顺序栈\seqstack\中缀转后缀\main.cpp(88): warning C4302: “类型转换”: 从“void *”到“char”截断
+  中缀转后缀.vcxproj -> F:\StudySummer\4.数据结构与算法\2.堆栈\1.顺序栈\SeqStack\Debug\中缀转后缀.exe
+  中缀转后缀.vcxproj -> F:\StudySummer\4.数据结构与算法\2.堆栈\1.顺序栈\SeqStack\Debug\中缀转后缀.pdb (Full PDB)

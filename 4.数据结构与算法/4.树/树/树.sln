@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "通用树", "树\树.vcxproj", "{00AC90E6-8E72-4CDE-9968-86629451D1AB}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "二叉树", "二叉树\二叉树.vcxproj", "{E159919F-E7CE-483A-993D-9E49E6BFF358}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{00AC90E6-8E72-4CDE-9968-86629451D1AB}.Debug|x64.ActiveCfg = Debug|x64
+		{00AC90E6-8E72-4CDE-9968-86629451D1AB}.Debug|x64.Build.0 = Debug|x64
+		{00AC90E6-8E72-4CDE-9968-86629451D1AB}.Debug|x86.ActiveCfg = Debug|Win32
+		{00AC90E6-8E72-4CDE-9968-86629451D1AB}.Debug|x86.Build.0 = Debug|Win32
+		{00AC90E6-8E72-4CDE-9968-86629451D1AB}.Release|x64.ActiveCfg = Release|x64
+		{00AC90E6-8E72-4CDE-9968-86629451D1AB}.Release|x64.Build.0 = Release|x64
+		{00AC90E6-8E72-4CDE-9968-86629451D1AB}.Release|x86.ActiveCfg = Release|Win32
+		{00AC90E6-8E72-4CDE-9968-86629451D1AB}.Release|x86.Build.0 = Release|Win32
+		{E159919F-E7CE-483A-993D-9E49E6BFF358}.Debug|x64.ActiveCfg = Debug|x64
+		{E159919F-E7CE-483A-993D-9E49E6BFF358}.Debug|x64.Build.0 = Debug|x64
+		{E159919F-E7CE-483A-993D-9E49E6BFF358}.Debug|x86.ActiveCfg = Debug|Win32
+		{E159919F-E7CE-483A-993D-9E49E6BFF358}.Debug|x86.Build.0 = Debug|Win32
+		{E159919F-E7CE-483A-993D-9E49E6BFF358}.Release|x64.ActiveCfg = Release|x64
+		{E159919F-E7CE-483A-993D-9E49E6BFF358}.Release|x64.Build.0 = Release|x64
+		{E159919F-E7CE-483A-993D-9E49E6BFF358}.Release|x86.ActiveCfg = Release|Win32
+		{E159919F-E7CE-483A-993D-9E49E6BFF358}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
