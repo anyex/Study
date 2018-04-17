@@ -19,9 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{2A1408A7-FF6D-4EF3-AE54-B99320256D60}</ProjectGuid>
+    <ProjectGuid>{084C7919-4040-4FA5-A9F5-09BEBCB86FA3}</ProjectGuid>
     <RootNamespace>操作符重载</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>33操作符重载</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

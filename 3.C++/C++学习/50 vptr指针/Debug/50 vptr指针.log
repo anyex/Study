@@ -1,0 +1,4 @@
+﻿  main.cpp
+f:\studysummer\3.c++\c++学习\50 vptr指针\main.cpp(30): warning C4101: “p1”: 未引用的局部变量
+  50 vptr指针.vcxproj -> F:\StudySummer\3.C++\C++学习\Debug\50 vptr指针.exe
+  50 vptr指针.vcxproj -> F:\StudySummer\3.C++\C++学习\Debug\50 vptr指针.pdb (Full PDB)

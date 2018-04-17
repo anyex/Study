@@ -19,9 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{7A3EBB38-492C-4DA6-A916-31513F6EF1CD}</ProjectGuid>
+    <ProjectGuid>{8821D2E2-E1C3-4D86-9E20-3E59673CAC4F}</ProjectGuid>
     <RootNamespace>类的封装</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+    <ProjectName>14类的封装</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

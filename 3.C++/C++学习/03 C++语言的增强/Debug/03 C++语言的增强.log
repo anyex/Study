@@ -1,0 +1,6 @@
+﻿  main.cpp
+f:\studysummer\3.c++\c++学习\03 c++语言的增强\main.cpp(35): warning C4101: “t1”: 未引用的局部变量
+f:\studysummer\3.c++\c++学习\03 c++语言的增强\main.cpp(55): warning C4305: “=”: 从“int”到“bool”截断
+f:\studysummer\3.c++\c++学习\03 c++语言的增强\main.cpp(156): warning C4101: “s2”: 未引用的局部变量
+  03 C++语言的增强.vcxproj -> F:\StudySummer\3.C++\C++学习\Debug\03 C++语言的增强.exe
+  03 C++语言的增强.vcxproj -> F:\StudySummer\3.C++\C++学习\Debug\03 C++语言的增强.pdb (Full PDB)

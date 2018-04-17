@@ -1,0 +1,7 @@
+﻿  Hero.cpp
+  Game.cpp
+f:\studysummer\3.c++\c++学习\54 mygame\game.cpp(38): error C2259: “Legalist”: 不能实例化抽象类
+  f:\studysummer\3.c++\c++学习\54 mygame\game.cpp(38): note: 由于下列成员:
+  f:\studysummer\3.c++\c++学习\54 mygame\game.cpp(38): note: “bool Hero::attack(Hero &)”: 是抽象的
+  f:\studysummer\3.c++\c++学习\54 mygame\hero.h(25): note: 参见“Hero::attack”的声明
+  正在生成代码...

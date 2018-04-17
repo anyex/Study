@@ -1,0 +1,7 @@
+﻿  main.cpp
+f:\studysummer\3.c++\c++学习\02 namespace 命名空间\main.cpp(56): warning C4101: “t2”: 未引用的局部变量
+f:\studysummer\3.c++\c++学习\02 namespace 命名空间\main.cpp(52): warning C4101: “t1”: 未引用的局部变量
+f:\studysummer\3.c++\c++学习\02 namespace 命名空间\main.cpp(63): warning C4101: “t”: 未引用的局部变量
+f:\studysummer\3.c++\c++学习\02 namespace 命名空间\main.cpp(59): warning C4101: “t3”: 未引用的局部变量
+  02 namespace 命名空间.vcxproj -> F:\StudySummer\3.C++\C++学习\Debug\02 namespace 命名空间.exe
+  02 namespace 命名空间.vcxproj -> F:\StudySummer\3.C++\C++学习\Debug\02 namespace 命名空间.pdb (Full PDB)

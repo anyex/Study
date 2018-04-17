@@ -1,0 +1,4 @@
+﻿  main.cpp
+f:\studysummer\3.c++\c++学习\引用作为函数返回值\main.cpp(13): warning C4172: 返回局部变量或临时变量的地址: a
+  引用作为函数返回值.vcxproj -> F:\StudySummer\3.C++\C++学习\Debug\引用作为函数返回值.exe
+  引用作为函数返回值.vcxproj -> F:\StudySummer\3.C++\C++学习\Debug\引用作为函数返回值.pdb (Full PDB)

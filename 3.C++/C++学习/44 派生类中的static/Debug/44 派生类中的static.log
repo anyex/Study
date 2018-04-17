@@ -1,0 +1,4 @@
+﻿  main.cpp
+f:\studysummer\3.c++\c++学习\44 派生类中的static\main.cpp(25): warning C4101: “b”: 未引用的局部变量
+  44 派生类中的static.vcxproj -> F:\StudySummer\3.C++\C++学习\Debug\44 派生类中的static.exe
+  44 派生类中的static.vcxproj -> F:\StudySummer\3.C++\C++学习\Debug\44 派生类中的static.pdb (Full PDB)
