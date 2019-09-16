@@ -1,6 +1,6 @@
 #include "LinkList.h"
 //为了实现代码的复用，即链表能保存任意相同类型的数据，链表只保存地址
-
+static int a;
 
 typedef struct _tag_TLinkList {
 

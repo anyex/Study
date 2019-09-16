@@ -21,3 +21,5 @@ git add -A 上面功能合集
 
 注：git不能识别中文路径
 
+git log  			查看提交版本
+git reset --hard 版本号    	回退到指定版本

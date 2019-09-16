@@ -17,7 +17,8 @@ void printStudent(Node* s)
 }
 int main()
 {
-	Node v1;
+	#if 0
+Node v1;
 	Node v2;
 	Node v3;
 	Node v4;
@@ -35,6 +36,8 @@ int main()
 	printf("v1=%p,get1=%p\n", &v1, LinkList_Get(list, 0));
 	printf("v2=%p,get2=%p\n", &v2, LinkList_Get(list, 1));
 	printf("v3=%p,get3=%p\n", &v3, LinkList_Get(list, 2));
-
+#endif
+	
+	
 	return 0;
 }
